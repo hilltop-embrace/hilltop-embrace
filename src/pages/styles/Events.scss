@@ -1,0 +1,63 @@
+@import "react-big-calendar/lib/sass/styles";
+
+.rbc-toolbar {
+	@media screen and (max-width: 767px) {
+		padding-top: 2.5rem;
+	}
+	display: flex;
+	justify-content: space-between;
+}
+
+.rbc-toolbar-label {
+	font-size: 1.5rem;
+	font-weight: 600;
+	position: absolute;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	@media screen and (max-width: 767px) {
+		top: 0;
+	}
+}
+
+.rbc-btn-group {
+	display: flex;
+	&:first-child {
+		button {
+			&:nth-child(2) {
+				order: -1;
+				border-top-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+				margin-left: 0;
+			}
+			&:first-child {
+				border-radius: 0;
+				margin-left: -1px;
+			}
+			&:last-child {
+			}
+		}
+	}
+	@media screen and (max-width: 767px) {
+		flex-basis: 100%;
+		&:first-child {
+			button {
+				flex-basis: 33.33333%;
+			}
+			margin-bottom: 0.5rem;
+		}
+		button {
+			flex-basis: 50%;
+		}
+	}
+}
+
+.rbc-event {
+	background-color: var(--tan);
+	opacity: 0.8;
+	transition: opacity 0.3s linear;
+	&.rbc-selected {
+		opacity: 1;
+		background-color: var(--tan);
+	}
+}
