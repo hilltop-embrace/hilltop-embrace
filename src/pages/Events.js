@@ -10,6 +10,7 @@ import Client from "../Contentful"
 import "./styles/Events.scss"
 import { StyledParagraph } from "../components/styles/StyledParagraph"
 import { StyledAnchor } from "../components/styles/StyledAction"
+import Title from "../components/Title"
 
 export default function Events() {
 	const [eventsList, setEventsList] = useState([])
@@ -53,118 +54,123 @@ export default function Events() {
 	}
 
 	return (
-		<div className="big-container" id="events">
-			<Hero title="Events" />
-			<FluidContainer fluid>
-				<Container className="mb-container">
-					<Row>
-						<Col>
-							<StyledHeader>Event Calendar</StyledHeader>
-						</Col>
-					</Row>
-					<Row>
-						<Col style={{ height: 975 }}>
-							<Calendar
-								localizer={localizer}
-								events={eventsList}
-								startAccessor="start"
-								endAccessor="end"
-								views={["month", "week"]}
-								onSelectEvent={handleEventSelection}
-							/>
-						</Col>
-					</Row>
-				</Container>
-				<Container>
-					<Row>
-						<Col>
-							<StyledHeader>Selected Event Details</StyledHeader>
-						</Col>
-					</Row>
-					{selectedEvent == null ? (
+		<>
+			<Title subtitle="Events" />
+			<div className="big-container" id="events">
+				<Hero title="Events" />
+				<FluidContainer fluid>
+					<Container className="mb-container">
 						<Row>
 							<Col>
-								<StyledParagraph>
-									Please select an event from the calendar above to view its
-									details and/or sign up.
-								</StyledParagraph>
+								<StyledHeader>Event Calendar</StyledHeader>
 							</Col>
 						</Row>
-					) : (
-						<>
-							<Row>
-								<Col>
-									<StyledParagraph style={{ fontSize: "1.5rem" }}>
-										<em>
-											<strong>{selectedEvent.title}</strong>
-										</em>
-									</StyledParagraph>
-								</Col>
-							</Row>
-							<Row>
-								<Col>
-									<StyledParagraph>{selectedEvent.description}</StyledParagraph>
-								</Col>
-							</Row>
+						<Row>
+							<Col style={{ height: 975 }}>
+								<Calendar
+									localizer={localizer}
+									events={eventsList}
+									startAccessor="start"
+									endAccessor="end"
+									views={["month", "week"]}
+									onSelectEvent={handleEventSelection}
+								/>
+							</Col>
+						</Row>
+					</Container>
+					<Container>
+						<Row>
+							<Col>
+								<StyledHeader>Selected Event Details</StyledHeader>
+							</Col>
+						</Row>
+						{selectedEvent == null ? (
 							<Row>
 								<Col>
 									<StyledParagraph>
-										<em>Location: </em>
-										{selectedEvent.location}
+										Please select an event from the calendar above to view its
+										details and/or sign up.
 									</StyledParagraph>
 								</Col>
 							</Row>
-							{moment(selectedEvent.rawStart).format("DD MM YYYY") ===
-							moment(selectedEvent.rawEnd).format("DD MM YYYY") ? (
+						) : (
+							<>
 								<Row>
 									<Col>
-										<StyledParagraph>
-											<em>Date: </em>
-											{moment(selectedEvent.rawStart).format("MMM DD, YYYY")}
+										<StyledParagraph style={{ fontSize: "1.5rem" }}>
+											<em>
+												<strong>{selectedEvent.title}</strong>
+											</em>
 										</StyledParagraph>
 									</Col>
 								</Row>
-							) : (
+								<Row>
+									<Col>
+										<StyledParagraph>
+											{selectedEvent.description}
+										</StyledParagraph>
+									</Col>
+								</Row>
+								<Row>
+									<Col>
+										<StyledParagraph>
+											<em>Location: </em>
+											{selectedEvent.location}
+										</StyledParagraph>
+									</Col>
+								</Row>
+								{moment(selectedEvent.rawStart).format("DD MM YYYY") ===
+								moment(selectedEvent.rawEnd).format("DD MM YYYY") ? (
+									<Row>
+										<Col>
+											<StyledParagraph>
+												<em>Date: </em>
+												{moment(selectedEvent.rawStart).format("MMM DD, YYYY")}
+											</StyledParagraph>
+										</Col>
+									</Row>
+								) : (
+									<Row>
+										<Col xs={6}>
+											<StyledParagraph>
+												<em>Start Date: </em>
+												{moment(selectedEvent.rawStart).format("MMM DD, YYYY")}
+											</StyledParagraph>
+										</Col>
+										<Col>
+											<StyledParagraph>
+												<em>End Date: </em>
+												{moment(selectedEvent.rawEnd).format("MMM DD, YYYY")}
+											</StyledParagraph>
+										</Col>
+									</Row>
+								)}
 								<Row>
 									<Col xs={6}>
 										<StyledParagraph>
-											<em>Start Date: </em>
-											{moment(selectedEvent.rawStart).format("MMM DD, YYYY")}
+											<em>Start Time: </em>
+											{moment(selectedEvent.rawStart).format("h:mm A")}
 										</StyledParagraph>
 									</Col>
-									<Col>
+									<Col xs={6}>
 										<StyledParagraph>
-											<em>End Date: </em>
-											{moment(selectedEvent.rawEnd).format("MMM DD, YYYY")}
+											<em>End Time: </em>
+											{moment(selectedEvent.rawEnd).format("h:mm A")}
 										</StyledParagraph>
 									</Col>
 								</Row>
-							)}
-							<Row>
-								<Col xs={6}>
-									<StyledParagraph>
-										<em>Start Time: </em>
-										{moment(selectedEvent.rawStart).format("h:mm A")}
-									</StyledParagraph>
-								</Col>
-								<Col xs={6}>
-									<StyledParagraph>
-										<em>End Time: </em>
-										{moment(selectedEvent.rawEnd).format("h:mm A")}
-									</StyledParagraph>
-								</Col>
-							</Row>
-							<Row style={{ margin: ".75rem -15px" }}>
-								<Col style={{ height: 60 }}>
-									<StyledAnchor href={selectedEvent.formLink}>
-										Register
-									</StyledAnchor>
-								</Col>
-							</Row>
-						</>
-					)}
-				</Container>
-			</FluidContainer>
-		</div>
+								<Row style={{ margin: ".75rem -15px" }}>
+									<Col style={{ height: 60 }}>
+										<StyledAnchor href={selectedEvent.formLink}>
+											Register
+										</StyledAnchor>
+									</Col>
+								</Row>
+							</>
+						)}
+					</Container>
+				</FluidContainer>
+			</div>
+		</>
 	)
 }
