@@ -2,12 +2,10 @@
 	overflow: visible;
 	@media screen and (max-width: 767px) {
 		&.hide-overflow {
-			// opacity: 0;
 			overflow: hidden;
 			.big-container {
 				opacity: 0;
 			}
-			// position: fixed;
 		}
 	}
 }
