@@ -99,7 +99,7 @@ export default function Header() {
 						Contact
 					</NavLink>
 					<Nav.Link
-						href="https://instagram.com"
+						href="https://www.instagram.com/hilltopembrace/"
 						className="nav-link instagram-nav-link"
 						onClick={closeNav}
 					>
