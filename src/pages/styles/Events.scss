@@ -53,11 +53,11 @@
 }
 
 .rbc-event {
-	background-color: var(--tan);
+	background-color: var(--primary);
 	opacity: 0.8;
 	transition: opacity 0.3s linear;
 	&.rbc-selected {
 		opacity: 1;
-		background-color: var(--tan);
+		background-color: var(--primary);
 	}
 }

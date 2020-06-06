@@ -3,28 +3,45 @@
 	z-index: 9999;
 	top: 0;
 	width: 100vw;
-	padding: 1.5rem 3rem 0.75rem;
+	padding: 1.5rem 4.5rem 0.75rem;
 	border-bottom: transparent 1px solid;
 	font-weight: 600;
 	height: 83px;
 	transition: all 0.3s linear;
 	&.scrolled {
-		padding: 0.75rem 3rem;
+		padding: 0.75rem 4.5rem;
 		border-bottom-color: var(--white);
 		// background-color: rgba(30, 137, 217, 0.95);
 		background-color: rgba(136, 159, 199, 0.9);
+		#navbar-brand {
+			opacity: 1;
+			pointer-events: all;
+		}
 	}
 	#navbar-brand {
-		color: var(--white);
-		font-size: 2rem;
-		transition: text-shadow 0.3s linear, color 0.3s linear;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s linear;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		&:hover,
 		&:focus {
 			text-decoration: none;
-			text-shadow: 0 0 2px var(--white);
 		}
-		@media screen and (max-width: 767px) {
-			font-size: 1.5rem;
+		svg {
+			height: 2rem;
+			width: auto;
+			fill: var(--white);
+			transition: transform 0.3s linear;
+			@media screen and (max-width: 575px) {
+				height: 1.5rem;
+			}
+		}
+		&:active {
+			svg {
+				transform: scale(0.9);
+			}
 		}
 	}
 	#navbar-toggler {
@@ -122,15 +139,17 @@
 			}
 		}
 		.donate-nav-link {
-			width: 86px;
+			width: 100px;
 			height: 46px;
 			font-size: 1rem;
+			background-color: var(--primary);
+			color: var(--white);
 		}
 	}
 	@media screen and (max-width: 767px) {
-		padding: 1.5rem 1.5rem 0.75rem;
+		padding: 1.5rem 3rem 0.75rem;
 		&.scrolled {
-			padding: 0.75rem 1.5rem;
+			padding: 0.75rem 3rem;
 		}
 		&.open {
 			padding: 0.75rem 15px;
@@ -165,7 +184,7 @@
 					background-color: var(--black);
 				}
 				&.active {
-					color: var(--blue);
+					color: var(--secondary);
 					opacity: 1;
 					&:after {
 						background-color: transparent !important;

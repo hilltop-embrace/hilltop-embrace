@@ -1,18 +1,18 @@
 import { createGlobalStyle } from "styled-components"
-require("typeface-cormorant-garamond")
+
+require("typeface-source-sans-pro")
 
 export const GlobalStyle = createGlobalStyle`
 
 	:root {
-		--tan: #C79288;
-		/* --blue: #1E89D9; */
-		--blue: #889fc7;
+		--primary: #C79288;
+		--secondary: #889fc7;
 		--black: #111111;
-		--white: #f9f9f9;
+		--white: #fcfcfc;
 	}
 	
 	body {
-		font-family: "Cormorant Garamond", serif;
+		font-family: "Source Sans Pro", serif;
 		font-weight: 400;
 		color: var(--black);
 		background-color: var(--white);

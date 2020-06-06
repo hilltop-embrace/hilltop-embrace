@@ -1,10 +1,11 @@
+import { Col, Container, Row } from "react-bootstrap"
 import React, { useEffect } from "react"
+
+import { FluidContainer } from "../components/styles/FluidContainer"
 import Hero from "../components/Hero"
-import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import { StyledHeader } from "../components/styles/StyledHeader"
 import { StyledParagraph } from "../components/styles/StyledParagraph"
-import { Link } from "react-router-dom"
-import { FluidContainer } from "../components/styles/FluidContainer"
 import Title from "../components/Title"
 
 export default function About() {
@@ -103,35 +104,43 @@ export default function About() {
 								<StyledHeader>How You Can Help</StyledHeader>
 							</Col>
 						</Row>
-						<Row>
+						<Row xs={1}>
 							<Col>
 								<StyledParagraph>
 									We are currently taking the following items for donation:
 								</StyledParagraph>
-								<ul>
-									<li>
-										<StyledParagraph>Clothes</StyledParagraph>
-									</li>
-									<li>
-										<StyledParagraph>Hygiene Products</StyledParagraph>
-									</li>
-									<li>
-										<StyledParagraph>Feminine Products</StyledParagraph>
-									</li>
-									<li>
-										<StyledParagraph>
-											Non-Perishable Food Supplies
-										</StyledParagraph>
-									</li>
-									<li>
-										<StyledParagraph>Masks</StyledParagraph>
-									</li>
-									<li>
-										<StyledParagraph>Encouragement Letters</StyledParagraph>
-									</li>
-								</ul>
+								<Row xs={1} sm={2}>
+									<Col>
+										<ul>
+											<li>
+												<StyledParagraph>Clothes</StyledParagraph>
+											</li>
+											<li>
+												<StyledParagraph>Hygiene Products</StyledParagraph>
+											</li>
+											<li>
+												<StyledParagraph>Feminine Products</StyledParagraph>
+											</li>
+										</ul>
+									</Col>
+									<Col>
+										<ul>
+											<li>
+												<StyledParagraph>
+													Non-Perishable Food Supplies
+												</StyledParagraph>
+											</li>
+											<li>
+												<StyledParagraph>Masks</StyledParagraph>
+											</li>
+											<li>
+												<StyledParagraph>Encouragement Letters</StyledParagraph>
+											</li>
+										</ul>
+									</Col>
+								</Row>
 							</Col>
-							<Col xs={12} md={6}>
+							<Col>
 								<StyledParagraph>
 									You can also support us financially:
 								</StyledParagraph>

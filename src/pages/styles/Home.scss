@@ -18,18 +18,19 @@
 	#landing-content {
 		color: var(--white);
 		text-align: center;
-		text-shadow: 2px 2px 6px var(--black);
+		// text-shadow: 2px 2px 6px var(--black);
 		h1 {
-			font-weight: 700;
+			font-weight: 600;
+			font-style: italic;
 			font-size: 8vmax;
-			letter-spacing: 2px;
+			letter-spacing: 1px;
 			margin: 3rem 0;
 			@media screen and (max-width: 768px) {
 				font-size: 4rem;
 			}
 		}
 		h2 {
-			font-weight: 500;
+			font-weight: 400;
 			font-size: 2vmax;
 			margin-bottom: 2rem;
 			@media screen and (max-width: 768px) {
@@ -49,7 +50,7 @@
 			&:hover,
 			&:focus {
 				background-color: var(--white);
-				color: var(--blue);
+				color: var(--secondary);
 				opacity: 0.85;
 				text-decoration: none;
 				cursor: pointer;

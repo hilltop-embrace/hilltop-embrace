@@ -7,7 +7,7 @@
 	background-repeat: no-repeat;
 	background-position-x: center;
 	background-position-y: top;
-	padding: 0 3rem;
+	padding: 0 4.5rem;
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -20,12 +20,12 @@
 	.hero-title {
 		font-size: 6rem;
 		letter-spacing: 2px;
-		text-shadow: 1px 1px 3px var(--black);
+		// text-shadow: 1px 1px 3px var(--black);
 		line-height: 1;
-		font-weight: 700;
+		font-weight: 600;
 		position: absolute;
-		left: 3rem;
-		bottom: -18px;
+		left: 4.5rem;
+		bottom: 0px;
 		color: var(--white);
 		margin: 0;
 		z-index: 98;
@@ -33,12 +33,19 @@
 }
 @media screen and (max-width: 767px) {
 	.hero {
-		height: 20vh;
-		padding: 0 1.5rem;
+		height: 25vh;
+		padding: 0 3rem;
 		.hero-title {
-			font-size: 3rem;
-			bottom: -9px;
-			left: 1.5rem;
+			font-size: 4rem;
+			left: 3rem;
 		}
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.hero .hero-title {
+		left: 0;
+		width: 100%;
+		text-align: center;
 	}
 }

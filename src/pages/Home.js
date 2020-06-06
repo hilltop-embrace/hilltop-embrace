@@ -1,10 +1,12 @@
-import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "react-scroll"
 import "./styles/Home.scss"
+
+import { Col, Container, Row } from "react-bootstrap"
+
+import { Link } from "react-scroll"
+import React from "react"
 import { StyledHeader } from "../components/styles/StyledHeader"
-import { StyledParagraph } from "../components/styles/StyledParagraph"
 import { StyledLink } from "../components/styles/StyledAction"
+import { StyledParagraph } from "../components/styles/StyledParagraph"
 import Title from "../components/Title"
 
 export default function Home() {
@@ -23,19 +25,18 @@ export default function Home() {
 						<Row>
 							<Col>
 								<h2>
-									Developing personal relationships with the homeless and
-									joining their fight against systemic homelessness in New
-									Brunswick
+									Developing personal relationships with the homeless, as we
+									join their fight against systematic homelessness.
 								</h2>
 							</Col>
 						</Row>
-						<Row>
+						{/* <Row>
 							<Col>
 								<Link id="learn-more-btn" smooth="easeInOutCubic" to="intro">
 									Learn More
 								</Link>
 							</Col>
-						</Row>
+						</Row> */}
 					</Container>
 				</Container>
 				<Container fluid id="intro" className="nav-padding">

@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react"
 import "./styles/Header.scss"
-import { Navbar, Nav } from "react-bootstrap"
+
 import { Link, NavLink } from "react-router-dom"
+import { Nav, Navbar } from "react-bootstrap"
+import React, { useEffect, useState } from "react"
+
 import { IoLogoInstagram } from "react-icons/io"
+import { ReactComponent as Logo } from "../assets/images/logo.svg"
 import { StyledLink } from "./styles/StyledAction"
 
 export default function Header() {
@@ -57,7 +60,7 @@ export default function Header() {
 						window.scrollTo(0, 0)
 					}}
 				>
-					Hilltop Embrace
+					<Logo />
 				</Link>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="navbar-items-container" id="navbar-toggler">

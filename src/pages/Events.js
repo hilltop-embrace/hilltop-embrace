@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react"
-import Hero from "../components/Hero"
-import { FluidContainer } from "../components/styles/FluidContainer"
-import { StyledHeader } from "../components/styles/StyledHeader"
-import { Container, Col, Row } from "react-bootstrap"
-import { Calendar, momentLocalizer } from "react-big-calendar"
-import moment from "moment"
-import Client from "../Contentful"
-// import "react-big-calendar/lib/css/react-big-calendar.css"
 import "./styles/Events.scss"
-import { StyledParagraph } from "../components/styles/StyledParagraph"
+
+import { Calendar, momentLocalizer } from "react-big-calendar"
+import { Col, Container, Row } from "react-bootstrap"
+import React, { useEffect, useState } from "react"
+
+import Client from "../Contentful"
+import { FluidContainer } from "../components/styles/FluidContainer"
+import Hero from "../components/Hero"
 import { StyledAnchor } from "../components/styles/StyledAction"
+import { StyledHeader } from "../components/styles/StyledHeader"
+import { StyledParagraph } from "../components/styles/StyledParagraph"
 import Title from "../components/Title"
+import moment from "moment"
+
+// import "react-big-calendar/lib/css/react-big-calendar.css"
 
 export default function Events() {
 	const [eventsList, setEventsList] = useState([])
@@ -84,7 +87,7 @@ export default function Events() {
 								<StyledHeader>Selected Event Details</StyledHeader>
 							</Col>
 						</Row>
-						{selectedEvent == null ? (
+						{selectedEvent === null ? (
 							<Row>
 								<Col>
 									<StyledParagraph>
@@ -104,22 +107,46 @@ export default function Events() {
 										</StyledParagraph>
 									</Col>
 								</Row>
-								<Row>
+								<Row xs={1} md={2}>
 									<Col>
 										<StyledParagraph>
 											{selectedEvent.description}
 										</StyledParagraph>
-									</Col>
-								</Row>
-								<Row>
-									<Col>
 										<StyledParagraph>
 											<em>Location: </em>
 											{selectedEvent.location}
 										</StyledParagraph>
 									</Col>
+									<Col>
+										<StyledParagraph>
+											<em>Date and Time:</em>
+											<br />
+											{moment(selectedEvent.rawStart).format("DD MM YYYY") ===
+											moment(selectedEvent.rawEnd).format("DD MM YYYY")
+												? moment(selectedEvent.rawStart).format("MMM DD, YYYY")
+												: moment(selectedEvent.rawStart).format("MM") ===
+												  moment(selectedEvent.rawEnd).format("MM")
+												? moment(selectedEvent.rawStart).format("MMM DD") +
+												  " — " +
+												  moment(selectedEvent.rawEnd).format("DD, YYYY")
+												: moment(selectedEvent.rawStart).format("YYYY") ===
+												  moment(selectedEvent.rawEnd).format("YYYY")
+												? moment(selectedEvent.rawStart).format("MMM DD") +
+												  " — " +
+												  moment(selectedEvent.rawEnd).format("MMM DD, YYYY")
+												: moment(selectedEvent.rawStart).format(
+														"MMM DD, YYYY"
+												  ) +
+												  " — " +
+												  moment(selectedEvent.rawEnd).format("MMM DD, YYYY")}
+											<br />
+											{moment(selectedEvent.rawStart).format("h:mm A") +
+												" — " +
+												moment(selectedEvent.rawEnd).format("h:mm A")}
+										</StyledParagraph>
+									</Col>
 								</Row>
-								{moment(selectedEvent.rawStart).format("DD MM YYYY") ===
+								{/* {moment(selectedEvent.rawStart).format("DD MM YYYY") ===
 								moment(selectedEvent.rawEnd).format("DD MM YYYY") ? (
 									<Row>
 										<Col>
@@ -158,7 +185,7 @@ export default function Events() {
 											{moment(selectedEvent.rawEnd).format("h:mm A")}
 										</StyledParagraph>
 									</Col>
-								</Row>
+								</Row> */}
 								<Row style={{ margin: ".75rem -15px" }}>
 									<Col style={{ height: 60 }}>
 										<StyledAnchor href={selectedEvent.formLink}>

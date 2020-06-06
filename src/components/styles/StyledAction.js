@@ -1,23 +1,25 @@
-import { Link } from "react-router-dom"
 import styled, { css } from "styled-components"
 
-const tanStyle = css`
-	background-color: var(--tan);
+import { Link } from "react-router-dom"
+
+const style = css`
+	background-color: transparent;
 	opacity: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* padding: 18px 30px; */
-	width: 133px;
-	height: 60px;
+	border-radius: 1000px;
+	width: 150px;
+	height: 50px;
 	font-size: 1.25rem;
 	font-weight: 500;
-	color: var(--white);
-	border: none;
-	transition: opacity 0.3s linear, transform 0.3s linear;
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	transition: all 0.3s linear;
 	&:hover,
 	&:focus {
 		color: var(--white);
+		background-color: var(--primary);
 		opacity: 0.8;
 		text-decoration: none;
 	}
@@ -29,13 +31,13 @@ const tanStyle = css`
 	}
 `
 export const StyledLink = styled(Link)`
-	${tanStyle}
+	${style}
 `
 
 export const StyledButton = styled.button`
-	${tanStyle}
+	${style}
 `
 
 export const StyledAnchor = styled.a`
-	${tanStyle}
+	${style}
 `
