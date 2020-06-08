@@ -5,9 +5,9 @@ require("typeface-source-sans-pro")
 export const GlobalStyle = createGlobalStyle`
 
 	:root {
-		--primary: #C79288;
-		--secondary: #889fc7;
-		--black: #111111;
+		--primary: #FEDFBF;
+		--secondary: #1E89D9;
+		--black: #4B4B4B;
 		--white: #fcfcfc;
 	}
 	
