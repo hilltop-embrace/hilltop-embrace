@@ -1,0 +1,39 @@
+{
+  "name": "nextjs-typescript-starter",
+  "version": "1.0.0",
+  "repository": "github:rumeetgoradia/nextjs-typescript-starter",
+  "author": {
+    "name": "Author Name",
+    "email": "author@email.com",
+    "url": "https://example.com"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "1.2.0",
+    "@material-ui/core": "^4.11.2",
+    "@plaiceholder/base64": "^1.0.0",
+    "@plaiceholder/next": "^1.0.0",
+    "axios": "^0.21.1",
+    "next": "^10.0.4",
+    "next-seo": "^4.17.0",
+    "preact": "^10.5.9",
+    "react": "^16.14.0",
+    "react-dom": "^16.12.0",
+    "react-hook-form": "^6.14.1",
+    "react-icons": "^4.1.0",
+    "yup": "^0.32.8"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "typescript": "4.0"
+  },
+  "license": "MIT"
+}
