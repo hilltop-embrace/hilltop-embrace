@@ -1,11 +1,11 @@
 {
-  "name": "nextjs-typescript-starter",
-  "version": "1.0.0",
-  "repository": "github:rumeetgoradia/nextjs-typescript-starter",
+  "name": "hilltop-embrace",
+  "version": "2.0.0",
+  "repository": "github:hilltop-embrace/hilltop-embrace",
   "author": {
-    "name": "Author Name",
-    "email": "author@email.com",
-    "url": "https://example.com"
+    "name": "Rumeet Goradia",
+    "email": "rumeet.goradia@gmail.com",
+    "url": "https://rumeetgoradia.com"
   },
   "scripts": {
     "dev": "next",
