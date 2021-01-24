@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
 					</Typography>
 					<Typography variant="body1">
 						If you would like to volunteer or collaborate please see our{" "}
-						<Link href="/events">
+						<Link href="/events" passHref>
 							<Hyperlink>events</Hyperlink>
 						</Link>{" "}
 						page or contact us at{" "}

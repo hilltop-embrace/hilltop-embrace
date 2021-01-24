@@ -19,7 +19,7 @@ const Introduction: React.FC = () => {
 							{paragraph}
 						</Typography>
 					))}
-					<Link href="/about">
+					<Link href="/about" passHref>
 						<Button variant="outlined" color="secondary">
 							Learn More
 						</Button>

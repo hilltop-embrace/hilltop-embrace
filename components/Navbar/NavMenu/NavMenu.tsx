@@ -22,9 +22,8 @@ const NavMenu: React.FC<NavMenuProps> = ({ closeDrawer }) => {
 			className={classes.root}
 		>
 			{NAV_ITEMS.map((navItem, index) => (
-				<Link href={navItem.path} key={`nav-item-${index}`}>
+				<Link href={navItem.path} passHref key={`nav-item-${index}`}>
 					<MuiLink
-						component="button"
 						onClick={closeDrawer}
 						className={clsx(
 							classes.navItem,

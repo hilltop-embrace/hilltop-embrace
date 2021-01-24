@@ -61,6 +61,18 @@ const theme = responsiveFontSizes(
 				disableRipple: true,
 			},
 		},
+		overrides: {
+			MuiCssBaseline: {
+				"@global": {
+					html: {
+						scrollBehavior: "smooth",
+					},
+					body: {
+						scrollBehavior: "smooth",
+					},
+				},
+			},
+		},
 	})
 )
 
