@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
 	return (
 		<AppBar
 			position="fixed"
-			elevation={isMediumScreen || !isOpen ? 8 : 0}
+			elevation={(isMediumScreen || !isOpen) && isScrolled ? 8 : 0}
 			className={classes.root}
 		>
 			<Toolbar className={classes.toolbar}>

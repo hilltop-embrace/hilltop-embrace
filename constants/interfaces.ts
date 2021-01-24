@@ -9,3 +9,9 @@ export interface ContactItem {
 	url: string
 	icon: JSX.Element
 }
+
+export interface ContactFormInputs {
+	name: string
+	email: string
+	message: string
+}

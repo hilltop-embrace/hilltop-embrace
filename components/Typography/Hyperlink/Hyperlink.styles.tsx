@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const useHyperlinkStyles = makeStyles((theme) => ({
 	root: {
+		cursor: "pointer",
 		color: theme.palette.primary.main,
 		backgroundImage: `linear-gradient(transparent calc(100% - 2px), ${theme.palette.primary.main} 1px)`,
 		textDecoration: "none",

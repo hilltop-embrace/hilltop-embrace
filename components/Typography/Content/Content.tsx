@@ -11,11 +11,11 @@ const Content: React.FC = ({ children }) => {
 	}
 
 	return (
-		<div className={classes.root}>
+		<section className={classes.root}>
 			{Children.map(children, (child) =>
 				addMarginBottom(child as ReactElement)
 			)}
-		</div>
+		</section>
 	)
 }
 
