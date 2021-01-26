@@ -14,6 +14,7 @@ const useHeroStyles = makeStyles((theme) => ({
 		fontWeight: 300,
 		position: "absolute",
 		bottom: 0,
+		padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`,
 	},
 }))
 

@@ -1,4 +1,5 @@
 export * from "./contact"
+export * from "./events"
 export * from "./interfaces"
 export * from "./navigation"
 export * from "./seo"

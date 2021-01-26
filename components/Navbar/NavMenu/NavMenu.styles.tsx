@@ -12,6 +12,7 @@ const useNavMenuStyles = makeStyles((theme) => ({
 	navItem: {
 		color: theme.palette.common.white,
 		opacity: 0.85,
+		textAlign: "center",
 		fontWeight: "bold",
 		fontSize: theme.typography.fontSize * 1.5,
 		fontFamily: theme.typography.fontFamily,

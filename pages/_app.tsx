@@ -5,6 +5,7 @@ import { CssBaseline, ThemeProvider } from "@material-ui/core"
 import { DefaultSeo } from "next-seo"
 import { AppProps } from "next/app"
 import { useEffect } from "react"
+import "react-big-calendar/lib/sass/styles.scss"
 import SEO from "../next-seo.config"
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
