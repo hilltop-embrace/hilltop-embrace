@@ -1,3 +1,4 @@
+import { Content } from "@/components/Typography"
 import { Position } from "@/content"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Paper, Typography } from "@material-ui/core"
@@ -13,16 +14,18 @@ const PositionDescription: React.FC<PositionDescriptionProps> = ({
 	const classes = usePositionDescriptionStyles()
 
 	return (
-		<Paper className={classes.root}>
+		<Paper component="section" className={classes.root}>
 			{position ? (
-				<section>
+				<Content>
 					<Typography variant="h4" className={classes.title}>
 						{position.title}
 					</Typography>
 					{documentToReactComponents(position.description)}
-				</section>
+				</Content>
 			) : (
-				<Typography variant="body1">Please select a position above.</Typography>
+				<Typography variant="body1">
+					Please select a position above to views its description.
+				</Typography>
 			)}
 		</Paper>
 	)
