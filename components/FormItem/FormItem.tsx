@@ -1,6 +1,6 @@
 import { BaseTextFieldProps, TextField } from "@material-ui/core"
 import { FieldError } from "react-hook-form"
-import useContactFormItemStyles from "./ContactFormItem.styles"
+import useFormItemStyles from "./FormItem.styles"
 
 interface ContactFormItemProps extends BaseTextFieldProps {
 	name: string
@@ -16,7 +16,7 @@ const ContactFormItem: React.FC<ContactFormItemProps> = ({
 	schemaError,
 	...props
 }) => {
-	const classes = useContactFormItemStyles()
+	const classes = useFormItemStyles()
 
 	return (
 		<TextField

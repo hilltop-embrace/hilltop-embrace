@@ -1,3 +1,4 @@
+import FormItem from "@/components/FormItem"
 import { ContactFormInputs, CONTACT_FORM_SCHEMA } from "@/constants"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { Button, FormHelperText, Grid } from "@material-ui/core"
@@ -5,7 +6,6 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import useContactFormStyles from "./ContactForm.styles"
-import ContactFormItem from "./ContactFormItem"
 
 const ContactForm: React.FC = () => {
 	const {
@@ -24,7 +24,7 @@ const ContactForm: React.FC = () => {
 	const onSubmit = (data: ContactFormInputs) => {
 		axios({
 			method: "POST",
-			// url: "https://formspree.io/f/xjvpjelz",
+			url: process.env.NEXT_PUBLIC_CONTACT_FORM_URL,
 			data,
 		})
 			.then(() => {
@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
 			<input type="hidden" name="form-name" value="contact" />
 			<Grid container spacing={2}>
 				<Grid item xs={12}>
-					<ContactFormItem
+					<FormItem
 						inputRef={register}
 						name="name"
 						label="Name"
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
 					/>
 				</Grid>
 				<Grid item xs={12}>
-					<ContactFormItem
+					<FormItem
 						inputRef={register}
 						name="email"
 						label="Email Address"
@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
 					/>
 				</Grid>
 				<Grid item xs={12}>
-					<ContactFormItem
+					<FormItem
 						inputRef={register}
 						name="message"
 						label="Message"

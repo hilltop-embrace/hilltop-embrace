@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles"
 
-const useContactFormItemStyles = makeStyles((theme) => ({
+const useFormItemStyles = makeStyles((theme) => ({
 	root: {
 		transition: theme.transitions.create(["color"]),
 	},
@@ -11,4 +11,4 @@ const useContactFormItemStyles = makeStyles((theme) => ({
 	},
 }))
 
-export default useContactFormItemStyles
+export default useFormItemStyles

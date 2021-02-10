@@ -15,3 +15,7 @@ export interface ContactFormInputs {
 	email: string
 	message: string
 }
+
+export interface NewsletterFormInputs {
+	MERGE0: string
+}

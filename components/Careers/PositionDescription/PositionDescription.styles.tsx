@@ -26,11 +26,17 @@ const usePositionDescriptionStyles = makeStyles((theme) => ({
 			marginTop: 0,
 		},
 		"& li": {
+			fontSize: theme.typography.body1.fontSize,
+			fontWeight: 300,
 			marginTop: 0,
 			marginBottom: theme.spacing(1),
 			"& p": {
 				margin: 0,
 			},
+		},
+		"& p": {
+			fontWeight: 300,
+			fontSize: theme.typography.body1.fontSize,
 		},
 	},
 	title: {
