@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
 	return (
 		<section className={classes.root}>
 			<Container maxWidth="md" className={classes.container}>
-				<Typography variant="h1" className={classes.title}>
+				<Typography variant="h2" className={classes.title}>
 					{title}
 				</Typography>
 			</Container>

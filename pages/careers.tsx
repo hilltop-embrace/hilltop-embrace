@@ -13,7 +13,6 @@ interface CareersPageProps {
 
 const CareersPage: React.FC<CareersPageProps> = ({ positions }) => {
 	const [selectedPosition, setSelectedPosition] = useState<Position>()
-	console.log(positions)
 
 	const updateSelectedPosition = (position: Position) => {
 		setSelectedPosition(position)

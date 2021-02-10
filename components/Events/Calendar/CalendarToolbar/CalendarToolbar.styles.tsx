@@ -8,7 +8,7 @@ const useCalendarToolbarStyles = makeStyles((theme) => ({
 	month: {
 		fontWeight: "bold",
 		"& span": {
-			fontWeight: "normal",
+			fontWeight: 300,
 		},
 	},
 	controls: {

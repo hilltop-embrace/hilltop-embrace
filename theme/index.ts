@@ -43,7 +43,7 @@ const theme = responsiveFontSizes(
 		typography: {
 			fontSize: 16,
 			fontFamily: [
-				'"Inter"',
+				'"Roboto"',
 				"-apple-system",
 				"BlinkMacSystemFont",
 				'"Segoe UI"',
@@ -55,7 +55,56 @@ const theme = responsiveFontSizes(
 				'"Segoe UI Emoji"',
 				'"Segoe UI Symbol"',
 			].join(","),
+			h1: {
+				fontFamily: [
+					'"YesevaOne"',
+					"-apple-system",
+					"BlinkMacSystemFont",
+					'"Segoe UI"',
+					"Roboto",
+					'"Helvetica Neue"',
+					"Arial",
+					"sans-serif",
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"',
+				].join(","),
+			},
+			h2: {
+				fontFamily: [
+					'"Lora"',
+					"-apple-system",
+					"BlinkMacSystemFont",
+					'"Segoe UI"',
+					"Roboto",
+					'"Helvetica Neue"',
+					"Arial",
+					"sans-serif",
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"',
+				].join(","),
+			},
+			h3: {
+				fontFamily: [
+					'"Lora"',
+					"-apple-system",
+					"BlinkMacSystemFont",
+					'"Segoe UI"',
+					"Roboto",
+					'"Helvetica Neue"',
+					"Arial",
+					"sans-serif",
+					'"Apple Color Emoji"',
+					'"Segoe UI Emoji"',
+					'"Segoe UI Symbol"',
+				].join(","),
+			},
+			body1: {
+				fontWeight: 300,
+			},
 		},
+
 		props: {
 			MuiButton: {
 				disableRipple: true,

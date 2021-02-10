@@ -13,7 +13,7 @@ const useNavMenuStyles = makeStyles((theme) => ({
 		color: theme.palette.common.white,
 		opacity: 0.85,
 		textAlign: "center",
-		fontWeight: "bold",
+		fontWeight: 400,
 		fontSize: theme.typography.fontSize * 1.5,
 		fontFamily: theme.typography.fontFamily,
 		textTransform: "capitalize",

@@ -9,7 +9,35 @@ class MyDocument extends Document {
 				<Head>
 					<link
 						rel="preload"
-						href="/fonts/inter.woff2"
+						href="/fonts/YesevaOne-Regular.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Lora-VariableFont_wght.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Lora-Italic-VariableFont_wght.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Roboto-Light.woff2"
+						as="font"
+						type="font/woff2"
+						crossOrigin="anonymous"
+					/>
+					<link
+						rel="preload"
+						href="/fonts/Roboto-Medium.woff2"
 						as="font"
 						type="font/woff2"
 						crossOrigin="anonymous"

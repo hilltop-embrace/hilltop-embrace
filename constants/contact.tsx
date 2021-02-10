@@ -1,4 +1,8 @@
-import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai"
+import {
+	AiOutlineInstagram,
+	AiOutlineLinkedin,
+	AiOutlineMail,
+} from "react-icons/ai"
 import * as yup from "yup"
 import { ContactItem } from "./interfaces"
 
@@ -7,6 +11,11 @@ export const CONTACT_ITEMS: ContactItem[] = [
 		title: "Instagram",
 		url: "https://www.instagram.com/hilltopembrace/",
 		icon: <AiOutlineInstagram />,
+	},
+	{
+		title: "LinkedIn",
+		url: "https://www.linkedin.com/company/hilltop-embrace/",
+		icon: <AiOutlineLinkedin />,
 	},
 	{
 		title: "Email",
