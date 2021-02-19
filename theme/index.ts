@@ -121,6 +121,11 @@ const theme = responsiveFontSizes(
 					},
 				},
 			},
+			MuiOutlinedInput: {
+				input: {
+					paddingBottom: 15,
+				},
+			},
 		},
 	})
 )
